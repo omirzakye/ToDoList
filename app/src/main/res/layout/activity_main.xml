@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <androidx.constraintlayout.widget.ConstraintLayout />-->
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+        <LinearLayout
+                android:id="@+id/id_bottom_section"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"
+                android:padding="10dp" tools:ignore="MissingConstraints">
+
+                <EditText
+                        android:id="@+id/id_edit_text"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#130205"
+                        android:fontFamily="sans-serif"
+                        android:background="#F7FBEF"
+                        android:textStyle="italic"/>
+
+                <Button
+                        android:layout_width="wrap_content"
+                        android:onClick="addTask"
+                        android:layout_height="wrap_content"
+                        android:background="#ED4567"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Add Task"/>
+
+                <Button
+                        android:layout_width="50dp"
+                        android:onClick="clearAll"
+                        android:background="#ED4567"
+                        android:layout_height="wrap_content"
+                        android:text="X"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#D5EAAE"
+                android:layout_above="@id/id_bottom_section">
+
+                <ListView
+                        android:id="@+id/id_list_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                </ListView>
+        </LinearLayout>
+
+
+</RelativeLayout>
